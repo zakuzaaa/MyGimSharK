@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gim Shark — Магазин одежды</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GIM SHARK</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+      <a href="cart.html">Корзина 🛒 <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <section class="filter-section">
+    <h2>Фильтр товаров</h2>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">Все категории</option>
+      <option value="men">Мужская одежда</option>
+      <option value="women">Женская одежда</option>
+      <option value="accessories">Аксессуары</option>
+    </select>
+  </section>
+
+  <main id="product-list" class="product-grid"></main>
+
+  <div id="cart-popup" class="cart-popup hidden">
+    <h3>🛒 Корзина</h3>
+    <div id="cart-popup-items"></div>
+    <p><b>Итого:</b> <span id="cart-popup-total">0 ₸</span></p>
+    <button onclick="goToCart()">Перейти в корзину</button>
+    <button onclick="closeCart()">Закрыть</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Gim Shark. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
